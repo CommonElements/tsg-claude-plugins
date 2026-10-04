@@ -1,0 +1,90 @@
+{
+  "name": "tsg-plugins",
+  "description": "Claude Code plugins for The Schoeller Group's products: SourceFinch (web source monitoring) and Voydar (maritime intelligence).",
+  "owner": {
+    "name": "The Schoeller Group",
+    "url": "https://github.com/CommonElements/tsg-claude-plugins"
+  },
+  "renames": {},
+  "plugins": [
+    {
+      "name": "sourcefinch",
+      "source": "./plugins/sourcefinch",
+      "description": "Monitor public web sources with SourceFinch: catalog, monitors, changes, evidence and webhook delivery.",
+      "category": "data",
+      "relevance": {
+        "topic": "web monitoring",
+        "signals": {
+          "cli": [
+            "scrapy",
+            "playwright",
+            "puppeteer",
+            "crawlee",
+            "sourcefinch"
+          ],
+          "hosts": [
+            "sourcefinch.com"
+          ],
+          "filesRead": [
+            "**/scrapy.cfg",
+            "**/spiders/**",
+            "**/*scraper*",
+            "**/*crawler*",
+            "**/dags/**"
+          ],
+          "manifestDeps": [
+            {
+              "file": "[/\\\\]package\\.json$",
+              "pattern": "\"(@sourcefinch/[a-z-]+|crawlee|puppeteer|playwright|cheerio)\"\\s*:"
+            },
+            {
+              "file": "(requirements[^/\\\\]*\\.txt|pyproject\\.toml)$",
+              "pattern": "(^|\\n)\\s*\"?(scrapy|beautifulsoup4|playwright|selenium|apache-airflow|dagster|prefect)\\b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "voydar",
+      "source": "./plugins/voydar",
+      "description": "Maritime intelligence with Voydar: vessels and tracks, ports and arrivals, company fleets, sanctions screening.",
+      "category": "data",
+      "relevance": {
+        "topic": "maritime data",
+        "signals": {
+          "cwd": [
+            "**/*maritime*",
+            "**/*shipping*",
+            "**/*vessel*",
+            "**/*ais*"
+          ],
+          "hosts": [
+            "voydar.com",
+            "www.voydar.com",
+            "aisstream.io",
+            "data.aishub.net",
+            "api.marinetraffic.com",
+            "api.vesselfinder.com"
+          ],
+          "filesRead": [
+            "**/*.nmea",
+            "**/*ais*.csv",
+            "**/*vessel*",
+            "**/*unlocode*"
+          ],
+          "manifestDeps": [
+            {
+              "file": "[/\\\\]package\\.json$",
+              "pattern": "\"(ais-stream-decoder|ais-web|nmea-simple|ggencoder)\"\\s*:"
+            },
+            {
+              "file": "(requirements[^/\\\\]*\\.txt|pyproject\\.toml)$",
+              "pattern": "(^|\\n)\\s*\"?(pyais|libais|searoute)\\b"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

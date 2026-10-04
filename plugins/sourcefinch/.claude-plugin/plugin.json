@@ -1,0 +1,16 @@
+{
+  "name": "sourcefinch",
+  "displayName": "SourceFinch",
+  "version": "0.1.0",
+  "description": "Monitor public web sources with SourceFinch: find a Verified source, set up a monitor, review what changed, export the evidence and deliver changes by webhook.",
+  "author": { "name": "The Schoeller Group LLC", "email": "hello@sourcefinch.com", "url": "https://sourcefinch.com" },
+  "homepage": "https://sourcefinch.com/docs/claude-code",
+  "repository": "https://github.com/CommonElements/sourcefinch-claude-plugin",
+  "license": "MIT",
+  "keywords": ["monitoring", "web-data", "change-detection", "evidence", "mcp", "webhooks"],
+  "icon": "./assets/sourcefinch.svg",
+  "documentationUrl": "https://sourcefinch.com/docs/claude-code",
+  "supportUrl": "https://sourcefinch.com/docs",
+  "privacyPolicyUrl": "https://sourcefinch.com/privacy",
+  "termsOfServiceUrl": "https://sourcefinch.com/terms"
+}

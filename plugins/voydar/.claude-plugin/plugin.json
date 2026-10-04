@@ -1,0 +1,16 @@
+{
+  "name": "voydar",
+  "displayName": "Voydar",
+  "version": "0.1.0",
+  "description": "Maritime intelligence in Claude Code: vessel profiles and tracks, port calls and arrivals, company fleets and ownership, and sanctions screening, each with its sources, through the Voydar MCP server.",
+  "author": { "name": "The Schoeller Group LLC", "url": "https://www.voydar.com" },
+  "homepage": "https://www.voydar.com/developers/mcp",
+  "repository": "https://github.com/CommonElements/tsg-claude-plugins",
+  "license": "MIT",
+  "keywords": ["maritime", "ais", "vessels", "ports", "shipping", "sanctions", "mcp"],
+  "icon": "./assets/voydar.svg",
+  "documentationUrl": "https://www.voydar.com/developers/mcp",
+  "supportUrl": "https://www.voydar.com/developers",
+  "privacyPolicyUrl": "https://www.voydar.com/privacy",
+  "termsOfServiceUrl": "https://www.voydar.com/terms"
+}
