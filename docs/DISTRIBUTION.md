@@ -41,3 +41,9 @@ paths `plugins/voydar` and `plugins/sourcefinch`. Listing fields are already in 
     OFAC, UK, Canadian and EU sanctions lists. Data a source doesn't license for API use is shown as withheld, never guessed."
 - **SourceFinch: at public launch.** It's invite-only, and the legal pages are also pending review. Its prepared copy is
   in the SourceFinch repo's `docs/DISTRIBUTION.md`.
+
+## Claude and OpenAI directories
+
+Prepared 2026-10-04; Harry submits (each portal needs his login and accepts terms in TSG's name). Full packages, copy,
+reviewer steps and click-through: [DIRECTORY_SUBMISSIONS.md](DIRECTORY_SUBMISSIONS.md). OpenAI ZIPs are in `dist/`,
+built from `openai/<product>/` (`cd openai/<p> && zip -qr ../../dist/<p>-openai-<version>.zip . -x '.DS_Store'`).

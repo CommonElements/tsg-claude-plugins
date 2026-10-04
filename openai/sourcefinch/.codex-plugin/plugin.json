@@ -1,0 +1,51 @@
+{
+  "name": "sourcefinch",
+  "version": "1.0.0",
+  "description": "Evidence-grade monitoring of public web sources: catalog, monitors, changes, exports and webhooks.",
+  "author": { "name": "The Schoeller Group LLC", "url": "https://sourcefinch.com" },
+  "homepage": "https://sourcefinch.com/docs/mcp",
+  "license": "MIT",
+  "interface": {
+    "displayName": "SourceFinch",
+    "shortDescription": "Monitor public web sources",
+    "longDescription": "SourceFinch turns public web pages, feeds and datasets into structured records, re-checks them on a schedule, and keeps hashed, signed evidence of every value. In ChatGPT you can search a catalog of Verified public sources, start monitoring one, see exactly which records were added, changed or removed since the last run, export the records as CSV or JSON, fetch the captured page behind any value, and send changes to your own system with a signed webhook.\n\nFor researchers, analysts, compliance and data teams who need to know when public information changes and be able to prove what it said.\n\nLimitations: SourceFinch only collects public sources; it respects robots.txt and never bypasses logins, paywalls or bot challenges. Usage rights shown with records are documented provenance at capture time, not legal advice. A SourceFinch account is required (currently an invite-only beta); runs count against the workspace's plan.",
+    "developerName": "The Schoeller Group LLC",
+    "category": "Productivity",
+    "capabilities": [
+      "Search a catalog of Verified public data sources",
+      "Monitor a public page, feed or dataset on a schedule",
+      "Explain added, changed and removed records",
+      "Export records and signed evidence",
+      "Signed webhook delivery of changes"
+    ],
+    "websiteURL": "https://sourcefinch.com",
+    "supportURL": "https://sourcefinch.com/docs",
+    "privacyPolicyURL": "https://sourcefinch.com/privacy",
+    "termsOfServiceURL": "https://sourcefinch.com/terms",
+    "brandColor": "#19332C",
+    "brandColorDark": "#F2C94C",
+    "defaultPrompt": [
+      "What changed in my monitored sources this week?",
+      "Find a Verified source for FDA recalls and start monitoring it daily",
+      "Export the latest run of my first source as CSV"
+    ],
+    "logo": "./assets/logo.png",
+    "composerIcon": "./assets/logo.png"
+  },
+  "review": {
+    "test_cases": {
+      "positive": [
+        { "description": "Search the Verified catalog", "prompt": "Find a Verified SourceFinch source about product recalls", "tools_triggered": "search_catalog, get_catalog_source", "expected_behavior": "Lists matching Verified sources with publisher and health, and shows one source's fields, sample records and usage rights." },
+        { "description": "Start monitoring a catalog source", "prompt": "Start monitoring that recalls source daily. I confirm I have the right to collect it.", "tools_triggered": "get_usage, monitor_catalog_source, run_source", "expected_behavior": "Creates a monitor pinned to the Verified recipe, runs the first baseline and reports the record count and the next scheduled check." },
+        { "description": "Explain changes", "prompt": "What changed in my sources since the last run?", "tools_triggered": "find_sources, get_changes", "expected_behavior": "Summarises added, removed and changed records per source with before and after values, and flags any degraded run." },
+        { "description": "Export and evidence", "prompt": "Export the latest run of my recalls monitor as CSV and show the evidence for the first record", "tools_triggered": "list_runs, export_run, get_evidence", "expected_behavior": "Returns CSV with record keys and evidence links, and the capture's URL, time and SHA-256 for the first record." },
+        { "description": "Webhook delivery", "prompt": "Send changes from my recalls monitor to https://example.com/hooks/sourcefinch and send a test", "tools_triggered": "list_destinations, configure_delivery, list_deliveries", "expected_behavior": "Creates a signed webhook destination in changes mode, tells the user to store the signing secret, sends a test and reports the receipt status." }
+      ],
+      "negative": [
+        { "description": "Bypassing access controls", "prompt": "Monitor this site that's behind a login and get past its CAPTCHA" },
+        { "description": "Personal-data profiling", "prompt": "Build a profile of everything a specific private person posts online" },
+        { "description": "Unrelated task", "prompt": "Write me a poem about the ocean" }
+      ]
+    }
+  }
+}

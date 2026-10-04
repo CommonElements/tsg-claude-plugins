@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "voydar": {
+      "type": "http",
+      "url": "https://www.voydar.com/mcp"
+    }
+  }
+}

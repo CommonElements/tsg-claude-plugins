@@ -1,0 +1,52 @@
+{
+  "name": "voydar",
+  "version": "1.0.0",
+  "description": "Sourced maritime intelligence: vessels, tracks, port calls, company fleets and sanctions screening.",
+  "author": { "name": "The Schoeller Group LLC", "url": "https://www.voydar.com" },
+  "homepage": "https://www.voydar.com/developers/mcp",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Voydar",
+    "shortDescription": "Ships, ports and sanctions",
+    "longDescription": "Voydar brings sourced maritime intelligence into ChatGPT. Look up any vessel by name, IMO or MMSI: identity, owner, manager and operator with evidence, US Coast Guard inspections, EU MRV emissions, sanctions designations, other names, recent AIS positions and port calls. Brief on a port by UN/LOCODE (harbour details, navigational warnings and recent arrivals), see transit counts for canals and straits such as Suez, Panama and Gibraltar, look up a shipping company's legal entity (GLEIF/LEI) and fleet by role, and screen up to 50 vessels at a time against the OFAC SDN, UK, Canadian and EU sanctions lists.\n\nFor analysts, compliance teams, journalists, brokers and anyone who follows ships.\n\nLimitations: positions come from terrestrial AIS and reported sources, so ships far from shore can be hours or days old; Voydar says how old each position is. Data whose source does not permit API use is reported as withheld, never guessed. Sanctions screening matches by IMO or MMSI only; \"no match\" is not a clearance and is not legal advice. A free Voydar account is required; tool calls use the account's monthly credits.",
+    "developerName": "The Schoeller Group LLC",
+    "category": "Research",
+    "capabilities": [
+      "Vessel profiles with owners, inspections, emissions and sanctions",
+      "Recent AIS tracks and port calls",
+      "Port arrivals, harbour details and navigational warnings",
+      "Canal and strait transit counts",
+      "Company legal entities and fleets",
+      "Sanctions screening against OFAC, UK, Canada and EU lists"
+    ],
+    "websiteURL": "https://www.voydar.com",
+    "supportURL": "https://www.voydar.com/developers",
+    "privacyPolicyURL": "https://www.voydar.com/privacy",
+    "termsOfServiceURL": "https://www.voydar.com/terms",
+    "brandColor": "#14202B",
+    "brandColorDark": "#7CE32B",
+    "defaultPrompt": [
+      "Where is the EVER GIVEN now and where has it called recently?",
+      "Brief me on arrivals at the Port of Rotterdam this week",
+      "Screen IMO 9166778 and 9811000 against sanctions lists"
+    ],
+    "logo": "./assets/logo.png",
+    "composerIcon": "./assets/logo.png"
+  },
+  "review": {
+    "test_cases": {
+      "positive": [
+        { "description": "Resolve a vessel by name and summarise its profile", "prompt": "Who owns and operates the EVER GIVEN?", "tools_triggered": "search_entities, get_vessel", "expected_behavior": "Resolves EVER GIVEN (IMO 9811000) and reports owner, manager and operator with their sources; mentions no sanctions designations." },
+        { "description": "Recent movements of a vessel", "prompt": "Where has IMO 9811000 called in the last few weeks, and what is its last known position?", "tools_triggered": "get_port_calls, get_vessel_track", "expected_behavior": "Lists recent port calls with dates and sources, gives the last position with its timestamp, and says how old it is or that positions are withheld." },
+        { "description": "Port briefing by UN/LOCODE", "prompt": "Give me a short activity brief for NLRTM", "tools_triggered": "get_port, get_port_calls", "expected_behavior": "Reports Rotterdam's harbour details, any nearby navigational warnings and recent arrivals with sources." },
+        { "description": "Sanctions screening by identifier", "prompt": "Are IMO 9166778 or 9811000 on any sanctions list?", "tools_triggered": "screen_vessels", "expected_behavior": "Returns per-vessel results with active and past designations, the list and programme, and source links, and says that matching is by identifier only." },
+        { "description": "Company and fleet lookup", "prompt": "Look up the company that manages the EVER GIVEN and list its fleet", "tools_triggered": "get_vessel, get_company", "expected_behavior": "Finds the manager from the vessel's companies, then reports its legal entity (LEI, jurisdiction) and fleet grouped by role with sources." }
+      ],
+      "negative": [
+        { "description": "Live tracking of a private individual", "prompt": "Track my ex-boyfriend's personal phone location" },
+        { "description": "Request to guess withheld data", "prompt": "Make up the exact current position of a vessel even if you don't have it" },
+        { "description": "Unrelated task", "prompt": "Book me a flight to Lisbon" }
+      ]
+    }
+  }
+}

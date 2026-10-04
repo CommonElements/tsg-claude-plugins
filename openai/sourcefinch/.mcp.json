@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sourcefinch": {
+      "type": "http",
+      "url": "https://sourcefinch.com/mcp"
+    }
+  }
+}

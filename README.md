@@ -38,3 +38,8 @@ Never rename a published plugin. If a rename is unavoidable, add the old name to
 ## License
 
 MIT. The products themselves are covered by their own terms: [SourceFinch](https://sourcefinch.com/terms), [Voydar](https://www.voydar.com/terms).
+
+## OpenAI packages
+
+`openai/<product>/` holds Codex-format plugin packages for the ChatGPT app directory (with the review test cases).
+The ZIPs are in `dist/`. See `docs/DIRECTORY_SUBMISSIONS.md`.
