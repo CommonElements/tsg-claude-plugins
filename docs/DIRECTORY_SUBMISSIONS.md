@@ -11,7 +11,7 @@ written out; nothing has been submitted yet. Record each submission's date and s
 |---|---|---|
 | Remote HTTPS MCP, OAuth with dynamic client registration and PKCE | ✔ `https://www.voydar.com/mcp` | ✔ `https://sourcefinch.com/mcp` |
 | Every tool has `title` + `readOnlyHint`/`destructiveHint` (Claude) | ✔ | ✔ |
-| All three hints explicit on every tool (OpenAI: `readOnlyHint`, `destructiveHint`, `openWorldHint`) | ✔ | ⚠ read tools omit `destructiveHint` (implied false); sent to the SourceFinch MCP owner to make it explicit |
+| All three hints explicit on every tool (OpenAI: `readOnlyHint`, `destructiveHint`, `openWorldHint`) | ✔ | ✔ all four hints explicit on all 23 tools (SourceFinch PR #89) |
 | security.txt | ✔ (Voydar #82) | ✔ |
 | Terms and privacy | ⚠ The current pages say "pending legal review". The full suite is drafted in **Voydar PR #84**, and Harry is approving its decisions. Submit once #84 is live, or say so in the application | ⚠ Same: drafts pending review |
 | Sign-up | Public, free account, 14-day Pro trial with no card | **Invite-only beta**. Claude's form asks "what users need before they can connect", so state the invite. OpenAI treats B2B and limited access case by case |
@@ -112,4 +112,4 @@ and reviewers need the test account to work, which it will. Expect them to ask a
 | Anthropic: MCP connector | SourceFinch | — | Ready; can go now with honest invite-only wording, or at launch |
 | Anthropic: plugin bundle | SourceFinch | — | Ready (`plugins/sourcefinch`) |
 | OpenAI: app/plugin | Voydar | — | ZIP ready; challenge route in PR #85 |
-| OpenAI: app/plugin | SourceFinch | — | ZIP ready; challenge route in PR #85; explicit `destructiveHint` pending |
+| OpenAI: app/plugin | SourceFinch | — | ZIP ready; challenge route in PR #85 |
