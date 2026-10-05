@@ -6,7 +6,7 @@ own repo's `docs/DISTRIBUTION.md` (SourceFinch) or below (Voydar).
 
 | Plugin | Version | Verified (UTC) | Notes |
 |---|---|---|---|
-| `sourcefinch` | 0.1.0 | 2026-10-04: installed from GitHub in a clean config; 5 skills and `plugin:sourcefinch:sourcefinch` MCP loaded; test install removed | Invite-only beta |
+| `sourcefinch` | 0.1.0 | 2026-10-04: installed from GitHub in a clean config; 5 skills and `plugin:sourcefinch:sourcefinch` MCP loaded; test install removed | Public; free account; 14-day Pro trial, no card |
 | `voydar` | 0.1.0 | 2026-10-04: same check; 5 skills and `plugin:voydar:voydar` MCP loaded; test install removed | Public; free account; 14-day Pro trial, no card |
 
 ## Voydar server listings
@@ -39,7 +39,7 @@ paths `plugins/voydar` and `plugins/sourcefinch`. Listing fields are already in 
   - Copy: "Voydar brings sourced maritime intelligence into Claude: look up vessels by name, IMO or MMSI, see recent
     tracks and port calls, brief on a port's arrivals, trace company fleets and ownership, and screen vessels against
     OFAC, UK, Canadian and EU sanctions lists. Data a source doesn't license for API use is shown as withheld, never guessed."
-- **SourceFinch: at public launch.** It's invite-only, and the legal pages are also pending review. Its prepared copy is
+- **SourceFinch: ready to submit.** Public sign-up opened 2026-10-04 and the legal suite is live. Its prepared copy is
   in the SourceFinch repo's `docs/DISTRIBUTION.md`.
 
 ## Claude and OpenAI directories

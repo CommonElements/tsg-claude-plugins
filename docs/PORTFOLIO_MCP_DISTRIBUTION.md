@@ -137,7 +137,7 @@ The official `claude-plugins-official` marketplace isn't open to submissions (pa
 
 | Product | Registry | mcp.so | Plugin | Install buttons | Anthropic directories |
 |---|---|---|---|---|---|
-| SourceFinch | `com.sourcefinch/sourcefinch` live | #4731 | `sourcefinch@tsg-plugins` 0.1.0 | /docs/mcp, /docs/claude-code | At public launch (invite-only; legal drafts) |
+| SourceFinch | `com.sourcefinch/sourcefinch` live | #4731 | `sourcefinch@tsg-plugins` 0.1.0 | /docs/mcp, /docs/claude-code | Ready: public sign-up and legal suite live (2026-10-04); Harry submits |
 | Voydar | `com.voydar/voydar` live | #4732 | `voydar@tsg-plugins` 0.1.0 | /developers/mcp | Public sign-up ✔, but the legal pages say "pending legal review" and there's no security.txt. Fix both, then Harry submits |
 
 ## Entilume: future

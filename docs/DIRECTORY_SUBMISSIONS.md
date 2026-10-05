@@ -13,8 +13,8 @@ written out; nothing has been submitted yet. Record each submission's date and s
 | Every tool has `title` + `readOnlyHint`/`destructiveHint` (Claude) | ✔ | ✔ |
 | All three hints explicit on every tool (OpenAI: `readOnlyHint`, `destructiveHint`, `openWorldHint`) | ✔ | ✔ all four hints explicit on all 23 tools (SourceFinch PR #89) |
 | security.txt | ✔ (Voydar #82) | ✔ |
-| Terms and privacy | ⚠ The current pages say "pending legal review". The full suite is drafted in **Voydar PR #84**, and Harry is approving its decisions. Submit once #84 is live, or say so in the application | ⚠ Same: drafts pending review |
-| Sign-up | Public, free account, 14-day Pro trial with no card | **Invite-only beta**. Claude's form asks "what users need before they can connect", so state the invite. OpenAI treats B2B and limited access case by case |
+| Terms and privacy | ⚠ The current pages say "pending legal review". The full suite is drafted in **Voydar PR #84**, and Harry is approving its decisions. Submit once #84 is live, or say so in the application | ✔ Full legal suite live (SourceFinch #78, 2026-10-04) |
+| Sign-up | Public, free account, 14-day Pro trial with no card | Public (opened 2026-10-04): free account, 14-day Pro trial with no card. |
 | Reviewer test account | Harry creates one (password login, **no MFA**, no email code) with follows, a watchlist and alerts populated | Harry creates one (password login, no MFA) with 2–3 monitors, a few runs, one change and a test webhook destination |
 | OpenAI domain verification | Route ready: `/.well-known/openai-apps-challenge` serves `OPENAI_APPS_CHALLENGE` (Voydar #85) | Same (SourceFinch #85) |
 | OpenAI "no upgrade promotion / checkout links" | ✔ Skills don't promote upgrades. Check that `get_usage` text doesn't push upgrades | Skills in the OpenAI package drop the `upgrade_url` link. ⚠ `get_usage` returns `upgrade_url` (a field, not a prompt; mention it in review notes) |
@@ -35,8 +35,8 @@ escalate it to Verified review.
 4. **Tools:** they sync automatically. Expect no flags.
 5. **Listing:** paste from the copy below; the icon is `openai/<product>/assets/logo.png`. The slug (`voydar` /
    `sourcefinch`) is permanent.
-6. **Use cases:** paste below. What users need: Voydar: "a free Voydar account"; SourceFinch: "a SourceFinch account
-   (invite-only beta; request access at sourcefinch.com/request-access)". Reads and writes: Voydar **reads**;
+6. **Use cases:** paste below. What users need: Voydar: "a free Voydar account"; SourceFinch: "a free SourceFinch account
+   (sign up at sourcefinch.com/signup)". Reads and writes: Voydar **reads**;
    SourceFinch **reads and writes** (creates monitors, runs and webhook destinations).
 7. **Company:** The Schoeller Group LLC, https://theschoellergroup.com, primary contact Harry.
 8. **Authentication:** **OAuth with dynamic client registration**.
@@ -66,7 +66,7 @@ escalate it to Verified review.
 
 - **Name:** SourceFinch
 - **One-liner:** Evidence-grade monitoring of public web sources: catalog, scheduled monitors, field-level changes, exports and signed evidence.
-- **Description:** SourceFinch turns public web pages, feeds and datasets into structured records, re-checks them on a schedule, and keeps hashed, signed, timestamped evidence of every value. With the connector, Claude can search a catalog of Verified public sources, start monitoring one (pinned to the reviewed recipe and its usage rights), run it, explain exactly which records were added, changed or removed, export records as CSV, JSON or NDJSON, fetch the captured page behind any value or the offline-verifiable WACZ evidence bundle, and deliver changes to your own system by signed webhook. SourceFinch only collects public sources, respects robots.txt and never bypasses logins, paywalls or bot challenges. Usage rights are documented provenance at capture time, not legal advice. SourceFinch is an invite-only beta; runs count against the workspace's plan.
+- **Description:** SourceFinch turns public web pages, feeds and datasets into structured records, re-checks them on a schedule, and keeps hashed, signed, timestamped evidence of every value. With the connector, Claude can search a catalog of Verified public sources, start monitoring one (pinned to the reviewed recipe and its usage rights), run it, explain exactly which records were added, changed or removed, export records as CSV, JSON or NDJSON, fetch the captured page behind any value or the offline-verifiable WACZ evidence bundle, and deliver changes to your own system by signed webhook. SourceFinch only collects public sources, respects robots.txt and never bypasses logins, paywalls or bot challenges. Usage rights are documented provenance at capture time, not legal advice. A free SourceFinch account is required (new workspaces get a 14-day Pro trial, no card); runs count against the workspace's plan.
 - **Categories:** Data & analytics; Research; Developer tools.
 - **Docs:** https://sourcefinch.com/docs/mcp. **Privacy:** https://sourcefinch.com/privacy. **Support:** hello@sourcefinch.com.
 - **Reviewer steps:** sign in at the OAuth prompt and pick the seeded project; ask: "What changed in my sources?", "Search
@@ -100,8 +100,8 @@ Skills are adapted to OpenAI's policy: no upgrade or checkout links.
    release notes ("Initial release"). Commerce declaration: **No**.
 8. Tick the policy attestations and **Submit**. Publishing after approval is your choice of timing.
 
-**SourceFinch on OpenAI:** submit after the invite question is settled. OpenAI handles limited-access B2B case by case,
-and reviewers need the test account to work, which it will. Expect them to ask about invite-only access.
+**SourceFinch on OpenAI:** public sign-up is open (2026-10-04), so the limited-access question no longer applies.
+Reviewers still need the test account to work.
 
 ## Submission log
 
@@ -109,7 +109,7 @@ and reviewers need the test account to work, which it will. Expect them to ask a
 |---|---|---|---|
 | Anthropic: MCP connector | Voydar | — | Ready; waits for Harry (and PR #84 live, ideally) |
 | Anthropic: plugin bundle | Voydar | — | Ready (`plugins/voydar`) |
-| Anthropic: MCP connector | SourceFinch | — | Ready; can go now with honest invite-only wording, or at launch |
+| Anthropic: MCP connector | SourceFinch | — | Ready; public sign-up is open |
 | Anthropic: plugin bundle | SourceFinch | — | Ready (`plugins/sourcefinch`) |
 | OpenAI: app/plugin | Voydar | — | ZIP ready; challenge route in PR #85 |
 | OpenAI: app/plugin | SourceFinch | — | ZIP ready; challenge route in PR #85 |

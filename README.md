@@ -23,7 +23,7 @@ Then run `/mcp`, choose the server, and sign in (OAuth). To receive new versions
 
 Notes:
 - **Voydar** works with a free account, and new accounts get 14 days of Pro, no card. Tool calls use your plan's credits.
-- **SourceFinch** is an invite-only beta; request access at https://sourcefinch.com/request-access.
+- **SourceFinch** works with a free account (https://sourcefinch.com/signup), and new workspaces get 14 days of Pro, no card. Runs count against your plan.
 
 ## Releasing (maintainers)
 

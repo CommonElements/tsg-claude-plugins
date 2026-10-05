@@ -5,7 +5,7 @@ description: Start monitoring a public web page, feed or dataset with SourceFinc
 
 # Monitor a public web source with SourceFinch
 
-SourceFinch turns a public page, feed or API into structured records, re-checks it on a schedule, and keeps hashed evidence of every value. These steps use the tools of the SourceFinch MCP server bundled with this plugin. If its tools aren't available, tell the user to run `/mcp`, choose **sourcefinch** and sign in (SourceFinch is an invite-only beta; access can be requested at https://sourcefinch.com/request-access).
+SourceFinch turns a public page, feed or API into structured records, re-checks it on a schedule, and keeps hashed evidence of every value. These steps use the tools of the SourceFinch MCP server bundled with this plugin. If its tools aren't available, tell the user to run `/mcp`, choose **sourcefinch** and sign in (an account is free at https://sourcefinch.com/signup).
 
 1. **Check the plan first.** Call `get_usage` (if the server offers it) or `whoami` to see the plan, remaining runs and source limits. If the plan has no room for another source, say so and link the `upgrade_url` instead of failing later.
 2. **Prefer a Verified catalog source.** Call `search_catalog` with the topic. If a Verified source fits, call `get_catalog_source` and show the user its fields, a few sample records, the 30-day reliability and its usage rights.
