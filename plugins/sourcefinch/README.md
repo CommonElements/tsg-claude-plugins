@@ -12,6 +12,6 @@ The plugin bundles the SourceFinch MCP server (`https://sourcefinch.com/mcp`, OA
 | `setup-delivery` | Signed webhook destinations, tests and delivery receipts |
 | `/sourcefinch:status` | Plan, usage and the health of your sources |
 
-SourceFinch is an **invite-only beta**; request access at https://sourcefinch.com/request-access. On first use, run `/mcp`, choose **sourcefinch** and sign in.
+You need a SourceFinch account: sign up free at https://sourcefinch.com/signup (new workspaces get 14 days of Pro, no card). On first use, run `/mcp`, choose **sourcefinch** and sign in.
 
 SourceFinch respects robots.txt and never bypasses logins, paywalls or bot challenges. See https://sourcefinch.com/terms and https://sourcefinch.com/privacy.

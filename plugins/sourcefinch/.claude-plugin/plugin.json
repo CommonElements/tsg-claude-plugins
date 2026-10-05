@@ -1,7 +1,7 @@
 {
   "name": "sourcefinch",
   "displayName": "SourceFinch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Monitor public web sources with SourceFinch: find a Verified source, set up a monitor, review what changed, export the evidence and deliver changes by webhook.",
   "author": { "name": "The Schoeller Group LLC", "email": "hello@sourcefinch.com", "url": "https://sourcefinch.com" },
   "homepage": "https://sourcefinch.com/docs/claude-code",
