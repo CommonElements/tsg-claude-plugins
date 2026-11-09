@@ -5,6 +5,7 @@ A Claude Code plugin marketplace for The Schoeller Group's products.
 | Plugin | Product | What it adds |
 |---|---|---|
 | [`sourcefinch`](plugins/sourcefinch) | [SourceFinch](https://sourcefinch.com): monitoring of public web sources with evidence | The SourceFinch MCP server plus skills to monitor a source, review changes, export evidence and set up webhook delivery |
+| [`parhard`](plugins/parhard) | [ParHard](https://parhard.com): golf courses and your own rounds | The ParHard MCP server plus skills to find a course, plan a trip, find courses near you and read your own stats (Plus) |
 | [`voydar`](plugins/voydar) | [Voydar](https://www.voydar.com): maritime intelligence | The Voydar MCP server plus skills to track a vessel, brief on a port, look up a company fleet and screen for sanctions |
 
 ## Install

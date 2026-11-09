@@ -1,0 +1,22 @@
+{
+  "name": "parhard",
+  "displayName": "ParHard",
+  "version": "0.2.0",
+  "description": "Look up US golf courses with sourced facts, and (Plus, with your consent) your own rounds and stats, through the ParHard MCP server.",
+  "author": {
+    "name": "ParHard",
+    "url": "https://parhard.com"
+  },
+  "homepage": "https://parhard.com/developers/mcp",
+  "license": "MIT",
+  "keywords": [
+    "golf",
+    "courses",
+    "mcp"
+  ],
+  "documentationUrl": "https://parhard.com/developers/mcp",
+  "supportUrl": "mailto:support@parhard.com",
+  "privacyPolicyUrl": "https://parhard.com/privacy",
+  "termsOfServiceUrl": "https://parhard.com/terms",
+  "repository": "https://github.com/CommonElements/tsg-claude-plugins"
+}
