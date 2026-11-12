@@ -1,6 +1,6 @@
 {
   "name": "tsg-plugins",
-  "description": "Claude Code plugins for The Schoeller Group's products: SourceFinch (web source monitoring) and Voydar (maritime intelligence).",
+  "description": "Claude Code plugins for The Schoeller Group's products: SourceFinch (web source monitoring), Voydar (maritime intelligence) and ParHard (golf courses).",
   "owner": {
     "name": "The Schoeller Group",
     "url": "https://github.com/CommonElements/tsg-claude-plugins"
@@ -85,6 +85,12 @@
           ]
         }
       }
+    },
+    {
+      "name": "parhard",
+      "source": "./plugins/parhard",
+      "description": "Look up US golf courses with sourced facts, and (with Plus and your consent) your own rounds and stats, through the ParHard MCP server.",
+      "category": "data"
     }
   ]
 }
