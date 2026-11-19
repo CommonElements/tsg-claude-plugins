@@ -1,5 +1,13 @@
 name: Validate
-on: [push, pull_request]
+# 2026-11-19: run on pull requests and main only (every PR used to run twice),
+# and cancel superseded runs. Markdown is not filtered out: skills are .md.
+on:
+  push:
+    branches: [main]
+  pull_request:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
